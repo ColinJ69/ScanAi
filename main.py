@@ -16,7 +16,7 @@ if not data_path.is_dir():
 else:
     print('already created')
 with open(data_path / "scan.zip", 'wb') as f:
-  request = requests.get('https://github.com/ColinJ69/ScaniAi/raw/main/scans.zip')
+  request = requests.get('https://ndownloader.figshare.com/articles/1512427/versions/5')
   f.write(request.content)
 with zipfile.ZipFile(data_path / "scan.zip", "r") as zip_ref:
   zip_ref.extractall(image_path)
