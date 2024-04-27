@@ -1,3 +1,1 @@
-# ScanAi
-
-Project in progress
+Detects pneumonia from xray scan
