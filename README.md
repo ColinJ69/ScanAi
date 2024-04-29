@@ -1,1 +1,1 @@
-Detects pneumonia from xray scan
+Detects Brain Tumor from xray scan
