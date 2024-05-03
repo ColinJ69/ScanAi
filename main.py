@@ -17,9 +17,7 @@ else:
     print('already created')
 with open(data_path / "scan.zip", 'wb') as f:
   request = requests.get('https://github.com/ColinJ69/ScanAi/raw/main/224.zip')
-  request2 = requests.get('https://github.com/ColinJ169/ScanAi/raw/main/227.zip')  
   f.write(request.content)
-  f.write(
     
 with zipfile.ZipFile(data_path / "scan.zip", "r") as zip_ref:
   zip_ref.extractall(image_path)
@@ -98,7 +96,7 @@ def test(user_img):
 def tr_results():
     epochs = 5
 
-    for e in range(epochs):
+    for i in range(epochs):
       train()
 def te_results(user_img):
   test(user_img)
@@ -107,9 +105,9 @@ if __name__ == '__main__':
     app = Flask(__name__)
     @app.route('/')
     def welcome_page():
-        return Flask.render_templatehomepage.html')
+        return Flask.render_template('homepage.html')
     @app.route('/result', methods = ['GET','POST'])
     def result():
       pic = request.form['photo']
-      return render_template('result.html', breed=te_results(pic))
+      return render_template('result.html', result=te_results(pic))
     app.run(debug=True)
