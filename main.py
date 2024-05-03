@@ -16,7 +16,7 @@ if not data_path.is_dir():
 else:
     print('already created')
 with open(data_path / "scan.zip", 'wb') as f:
-  request = requests.get('https://github.com/ColinJ69/ScanAi/raw/main/224.zip')
+  request = requests.get('https://github.com/ColinJ69/ScanAi/raw/main/data.zip')
   f.write(request.content)
     
 with zipfile.ZipFile(data_path / "scan.zip", "r") as zip_ref:
